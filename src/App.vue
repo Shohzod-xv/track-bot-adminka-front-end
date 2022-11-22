@@ -97,9 +97,6 @@
           </div>
         </div>
       </section>
-      <section class="section">
-        <font-awesome-icon icon="fa-solid fa-bars" />hallo
-      </section>
     </div>
   </div>
 </template>
