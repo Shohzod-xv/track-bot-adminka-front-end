@@ -15,112 +15,88 @@
         <div class="table-responsive">
           <table class="table table-striped">
             <tbody><tr>
-              <th class="text-center">
-                <div class="custom-checkbox custom-checkbox-table custom-control">
-                  <input type="checkbox" data-checkboxes="mygroup" data-checkbox-role="dad" class="custom-control-input" id="checkbox-all">
-                  <label for="checkbox-all" class="custom-control-label">&nbsp;</label>
-                </div>
-              </th>
-              <th>Task Name</th>
-              <th>Progress</th>
-              <th>Members</th>
-              <th>Due Date</th>
+              <th class="bg-blue-grey">ID</th>
+              <th>User ID</th>
+              <th>Name</th>
+              <th>Number</th>
+              <th>Role</th>
               <th>Status</th>
               <th>Action</th>
             </tr>
             <tr>
-              <td class="p-0 text-center">
-                <div class="custom-checkbox custom-control">
-                  <input type="checkbox" data-checkboxes="mygroup" class="custom-control-input" id="checkbox-1">
-                  <label for="checkbox-1" class="custom-control-label">&nbsp;</label>
-                </div>
-              </td>
-              <td>Create a mobile app</td>
-              <td class="align-middle">
-                <div class="progress" data-height="4" data-toggle="tooltip" title="" data-original-title="100%" style="height: 4px;">
-                  <div class="progress-bar bg-success" data-width="100" style="width: 100px;"></div>
-                </div>
-              </td>
-              <td>
-                <img alt="image" src="assets/img/users/user-5.png" class="rounded-circle" width="35" data-toggle="tooltip" title="" data-original-title="Wildan Ahdian">
-              </td>
-              <td>2018-01-20</td>
+              <td>1</td>
+              <td>15716873654</td>
+              <td>Behzod Masharipov</td>
+              <td>+998 90 123 45 67</td>
+              <td>Admin</td>
               <td>
                 <div class="badge badge-success">Completed</div>
               </td>
-              <td><a href="#" class="btn btn-primary">Detail</a></td>
+              <td>
+                <a href="#" class="btn btn-outline-warning action"><i class="fas fa-eye"></i></a>
+                <a href="#" class="btn btn-outline-danger action"><i class="fas fa-trash"></i></a>
+                <a href="#" class="btn btn-outline-success action"><i class="fas fa-pen"></i></a>
+              </td>
             </tr>
             <tr>
-              <td class="p-0 text-center">
-                <div class="custom-checkbox custom-control">
-                  <input type="checkbox" data-checkboxes="mygroup" class="custom-control-input" id="checkbox-2">
-                  <label for="checkbox-2" class="custom-control-label">&nbsp;</label>
-                </div>
-              </td>
-              <td>Redesign homepage</td>
-              <td class="align-middle">
-                <div class="progress" data-height="4" data-toggle="tooltip" title="" data-original-title="40%" style="height: 4px;">
-                  <div class="progress-bar" data-width="40" style="width: 40px;"></div>
-                </div>
+              <td>2</td>
+              <td>25716873654</td>
+              <td>Sanjar Haliqov</td>
+              <td>+998 91 123 45 67</td>
+              <td>User</td>
+              <td>
+                <div class="badge badge-warning">Progressing</div>
               </td>
               <td>
-                <img alt="image" src="assets/img/users/user-1.png" class="rounded-circle" width="35" data-toggle="tooltip" title="" data-original-title="Nur Alpiana">
-                <img alt="image" src="assets/img/users/user-3.png" class="rounded-circle" width="35" data-toggle="tooltip" title="" data-original-title="Hariono Yusup">
-                <img alt="image" src="assets/img/users/user-4.png" class="rounded-circle" width="35" data-toggle="tooltip" title="" data-original-title="Bagus Dwi Cahya">
+                <a href="#" class="btn btn-outline-warning action"><i class="fas fa-eye"></i></a>
+                <a href="#" class="btn btn-outline-danger action"><i class="fas fa-trash"></i></a>
+                <a href="#" class="btn btn-outline-success action"><i class="fas fa-pen"></i></a>
               </td>
-              <td>2018-04-10</td>
-              <td>
-                <div class="badge badge-info">Todo</div>
-              </td>
-              <td><a href="#" class="btn btn-primary">Detail</a></td>
             </tr>
             <tr>
-              <td class="p-0 text-center">
-                <div class="custom-checkbox custom-control">
-                  <input type="checkbox" data-checkboxes="mygroup" class="custom-control-input" id="checkbox-3">
-                  <label for="checkbox-3" class="custom-control-label">&nbsp;</label>
-                </div>
-              </td>
-              <td>Backup database</td>
-              <td class="align-middle">
-                <div class="progress" data-height="4" data-toggle="tooltip" title="" data-original-title="70%" style="height: 4px;">
-                  <div class="progress-bar bg-warning" data-width="70" style="width: 70px;"></div>
-                </div>
+              <td>3</td>
+              <td>35716873654</td>
+              <td>Nodir Abdullayev</td>
+              <td>+998 90 123 45 67</td>
+              <td>Client</td>
+              <td>
+                <div class="badge badge-warning">Progressing</div>
               </td>
               <td>
-                <img alt="image" src="assets/img/users/user-1.png" class="rounded-circle" width="35" data-toggle="tooltip" title="" data-original-title="Rizal Fakhri">
-                <img alt="image" src="assets/img/users/user-2.png" class="rounded-circle" width="35" data-toggle="tooltip" title="" data-original-title="Hasan Basri">
+                <a href="#" class="btn btn-outline-warning action"><i class="fas fa-eye"></i></a>
+                <a href="#" class="btn btn-outline-danger action"><i class="fas fa-trash"></i></a>
+                <a href="#" class="btn btn-outline-success action"><i class="fas fa-pen"></i></a>
               </td>
-              <td>2018-01-29</td>
-              <td>
-                <div class="badge badge-warning">In Progress</div>
-              </td>
-              <td><a href="#" class="btn btn-primary">Detail</a></td>
             </tr>
             <tr>
-              <td class="p-0 text-center">
-                <div class="custom-checkbox custom-control">
-                  <input type="checkbox" data-checkboxes="mygroup" class="custom-control-input" id="checkbox-4">
-                  <label for="checkbox-4" class="custom-control-label">&nbsp;</label>
-                </div>
-              </td>
-              <td>Input data</td>
-              <td class="align-middle">
-                <div class="progress" data-height="4" data-toggle="tooltip" title="" data-original-title="100%" style="height: 4px;">
-                  <div class="progress-bar bg-success" data-width="100" style="width: 100px;"></div>
-                </div>
+              <td>4</td>
+              <td>45716873654</td>
+              <td>Jaloliddin Masharipov</td>
+              <td>+998 90 123 45 67</td>
+              <td>Driver</td>
+              <td>
+                <div class="badge badge-danger">Failed</div>
               </td>
               <td>
-                <img alt="image" src="assets/img/users/user-2.png" class="rounded-circle" width="35" data-toggle="tooltip" title="" data-original-title="Rizal Fakhri">
-                <img alt="image" src="assets/img/users/user-5.png" class="rounded-circle" width="35" data-toggle="tooltip" title="" data-original-title="Isnap Kiswandi">
-                <img alt="image" src="assets/img/users/user-4.png" class="rounded-circle" width="35" data-toggle="tooltip" title="" data-original-title="Yudi Nawawi">
-                <img alt="image" src="assets/img/users/user-1.png" class="rounded-circle" width="35" data-toggle="tooltip" title="" data-original-title="Khaerul Anwar">
+                <a href="#" class="btn btn-outline-warning action"><i class="fas fa-eye"></i></a>
+                <a href="#" class="btn btn-outline-danger action"><i class="fas fa-trash"></i></a>
+                <a href="#" class="btn btn-outline-success action"><i class="fas fa-pen"></i></a>
               </td>
-              <td>2018-01-16</td>
+            </tr>
+            <tr>
+              <td>5</td>
+              <td>55716873654</td>
+              <td>Nurbek Sadullayev</td>
+              <td>+998 90 123 45 67</td>
+              <td>Admin</td>
               <td>
                 <div class="badge badge-success">Completed</div>
               </td>
-              <td><a href="#" class="btn btn-primary">Detail</a></td>
+              <td>
+                <a href="#" class="btn btn-outline-warning action"><i class="fas fa-eye"></i></a>
+                <a href="#" class="btn btn-outline-danger action"><i class="fas fa-trash"></i></a>
+                <a href="#" class="btn btn-outline-success action"><i class="fas fa-pen"></i></a>
+              </td>
             </tr>
             </tbody></table>
         </div>
@@ -132,4 +108,7 @@
 <script>
 </script>
 <style scoped>
+.action{
+  margin-right: 5px;
+}
 </style>
