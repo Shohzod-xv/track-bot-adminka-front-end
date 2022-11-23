@@ -18,6 +18,12 @@
             <RouterLink :to="{ name: 'users' }"><i class="fas fa-user-alt"></i>Users</RouterLink>
           </div>
         </li>
+        <li class="dropdown">
+          <div class="nav-link">
+            <i data-feather="briefcase"></i>
+            <RouterLink :to="{ name: 'drivers' }"><i class="fas fa-car-alt"></i>Drivers</RouterLink>
+          </div>
+        </li>
       </ul>
     </aside>
   </div>

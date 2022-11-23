@@ -2,13 +2,13 @@
   <div class="col-12">
     <div class="card">
       <div class="card-header">
-        <h4>Users Table</h4>
+        <h4>Drivers Table</h4>
         <div class="card-header-form">
-              <div class="input-group-btn">
-                <button type="button" class="btn btn-info font-weight-bolder">
-                  Add User <span class="badge badge-transparent font-weight-bolder">+</span>
-                </button>
-              </div>
+          <div class="input-group-btn">
+            <button type="button" class="btn btn-info font-weight-bolder">
+              Add Driver <span class="badge badge-transparent font-weight-bolder">+</span>
+            </button>
+          </div>
         </div>
       </div>
       <div class="card-body p-0">
@@ -123,9 +123,11 @@
 </template>
 
 <script>
-</script>
-<style scoped>
-.action{
-  margin-right: 5px;
+export default {
+  name: "Drivers"
 }
+</script>
+
+<style scoped>
+
 </style>
