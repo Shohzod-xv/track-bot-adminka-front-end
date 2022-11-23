@@ -5,20 +5,19 @@
           <RouterLink to="/" class="logo-name">Adminka</RouterLink>
       </div>
       <ul class="sidebar-menu">
-        <li class="menu-header">Main</li>
+        <li class="menu-header">Menu</li>
         <li class="dropdown active">
           <div class="nav-link">
-            <i data-feather="monitor"></i>
-            <RouterLink to="/">Dashboard</RouterLink>
+<!--            <i data-feather="monitor"></i>-->
+            <RouterLink :to="{ name: 'home' }"><i class="fas fa-tachometer-alt"></i>Dashboard</RouterLink>
           </div>
         </li>
         <li class="dropdown">
           <div class="nav-link">
             <i data-feather="briefcase"></i>
-            <RouterLink :to="{ name: 'users' }">Users</RouterLink>
+            <RouterLink :to="{ name: 'users' }"><i class="fas fa-user-alt"></i>Users</RouterLink>
           </div>
         </li>
-
       </ul>
     </aside>
   </div>
