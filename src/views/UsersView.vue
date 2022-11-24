@@ -5,7 +5,7 @@
         <h4>Users Table</h4>
         <div class="card-header-form">
               <div class="input-group-btn">
-                <button type="button" class="btn btn-info font-weight-bolder">
+                <button type="button" class="btn btn-info font-weight-bold r">
                   Add User <span class="badge badge-transparent font-weight-bolder">+</span>
                 </button>
               </div>

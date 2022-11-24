@@ -14,7 +14,8 @@
       <div class="card-body p-0">
         <div class="table-responsive">
           <table class="table table-striped">
-            <tbody><tr>
+            <thead>
+            <tr>
               <th class="bg-info font-weight-bolder">ID</th>
               <th>User ID</th>
               <th>Name</th>
@@ -23,82 +24,25 @@
               <th>Status</th>
               <th>Action</th>
             </tr>
+            </thead>
+            <tbody v-for="driver in drivers">
             <tr>
-              <td class="font-weight-bolder">1</td>
-              <td>15716873654</td>
-              <td>Behzod Masharipov</td>
-              <td>+998 90 123 45 67</td>
-              <td>Admin</td>
+              <td class="font-weight-bolder">{{ driver.id}}</td>
+              <td>{{ driver.user_id}}</td>
+              <td>{{ driver.name}}</td>
+              <td>{{ driver.phone}}</td>
+              <td :class="role(driver.role)">{{ driver.role}}</td>
               <td>
-                <div class="badge badge-success">Completed</div>
+                <span :class="status(driver.status)">{{ driver.status }}</span>
               </td>
               <td>
-                <a href="#" class="btn btn-outline-warning action"><i class="fas fa-eye"></i></a>
+                <a href="#" class="btn btn-outline-info action"><i class="fas fa-eye"></i></a>
                 <a href="#" class="btn btn-outline-danger action"><i class="fas fa-trash"></i></a>
                 <a href="#" class="btn btn-outline-success action"><i class="fas fa-pen"></i></a>
               </td>
             </tr>
-            <tr>
-              <td class="font-weight-bolder">2</td>
-              <td>25716873654</td>
-              <td>Sanjar Haliqov</td>
-              <td>+998 91 123 45 67</td>
-              <td>User</td>
-              <td>
-                <div class="badge badge-warning">Progressing</div>
-              </td>
-              <td>
-                <a href="#" class="btn btn-outline-warning action"><i class="fas fa-eye"></i></a>
-                <a href="#" class="btn btn-outline-danger action"><i class="fas fa-trash"></i></a>
-                <a href="#" class="btn btn-outline-success action"><i class="fas fa-pen"></i></a>
-              </td>
-            </tr>
-            <tr>
-              <td class="font-weight-bolder">3</td>
-              <td>35716873654</td>
-              <td>Nodir Abdullayev</td>
-              <td>+998 90 123 45 67</td>
-              <td>Client</td>
-              <td>
-                <div class="badge badge-warning">Progressing</div>
-              </td>
-              <td>
-                <a href="#" class="btn btn-outline-warning action"><i class="fas fa-eye"></i></a>
-                <a href="#" class="btn btn-outline-danger action"><i class="fas fa-trash"></i></a>
-                <a href="#" class="btn btn-outline-success action"><i class="fas fa-pen"></i></a>
-              </td>
-            </tr>
-            <tr>
-              <td class="font-weight-bolder">4</td>
-              <td>45716873654</td>
-              <td>Jaloliddin Masharipov</td>
-              <td>+998 90 123 45 67</td>
-              <td>Driver</td>
-              <td>
-                <div class="badge badge-danger">Failed</div>
-              </td>
-              <td>
-                <a href="#" class="btn btn-outline-warning action"><i class="fas fa-eye"></i></a>
-                <a href="#" class="btn btn-outline-danger action"><i class="fas fa-trash"></i></a>
-                <a href="#" class="btn btn-outline-success action"><i class="fas fa-pen"></i></a>
-              </td>
-            </tr>
-            <tr>
-              <td class="font-weight-bolder">5</td>
-              <td>55716873654</td>
-              <td>Nurbek Sadullayev</td>
-              <td>+998 90 123 45 67</td>
-              <td>Admin</td>
-              <td>
-                <div class="badge badge-success">Completed</div>
-              </td>
-              <td>
-                <a href="#" class="btn btn-outline-warning action"><i class="fas fa-eye"></i></a>
-                <a href="#" class="btn btn-outline-danger action"><i class="fas fa-trash"></i></a>
-                <a href="#" class="btn btn-outline-success action"><i class="fas fa-pen"></i></a>
-              </td>
-            </tr>
-            </tbody></table>
+            </tbody>
+          </table>
         </div>
       </div>
       <div class="card-footer text-right">
@@ -123,11 +67,54 @@
 </template>
 
 <script>
+import axios from "axios";
 export default {
-  name: "Drivers"
+  name: "Drivers",
+  data() {
+    return {
+      drivers: [],
+    }
+  },
+  async created() {
+    try {
+      const {data} = await axios.get("http://127.0.0.1:8000/api/posts");
+      this.drivers = data.map((item) => ({
+        id: item.id,
+        user_id: item.user_id,
+        name: item.name,
+        phone: item.phone,
+        role: item.role,
+        status: item.status,
+      }))
+    } catch (error) {
+      alert(error.message);
+    }
+  },
+  methods: {
+    status(status) {
+      if (status === "completed") {
+        return "badge badge-success";
+      } else if (status === "pending") {
+        return "badge badge-warning";
+      } else {
+        return "badge badge-danger";
+      }
+    },
+    role(role) {
+      if (role === "Admin") {
+        return "text-dark font-weight-bolder";
+      } else if (role === "User") {
+        return "text-dark";
+      } else {
+        return "badge badge-danger";
+      }
+    }
+  }
 }
 </script>
 
 <style scoped>
-
+.action{
+  margin-right: 4px;
+}
 </style>

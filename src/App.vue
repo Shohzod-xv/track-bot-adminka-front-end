@@ -19,7 +19,7 @@ export default {
   components: {
    Navbar, Slidebar
   },
-}
+};
 </script>
 
 <style scoped>
